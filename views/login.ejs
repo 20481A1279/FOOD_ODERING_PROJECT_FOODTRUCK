@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="login">
+    <div class="logo__cover">
+      <h1 style="font-size: 30px; font-weight: bold; text-align: center; background-color: #a25d07; padding: 10px; border: 1px solid #E63946; border-radius: 20px; color: #1D3557;">FOOD TRUCK</h1>
+    </div>
+    <div class="form-wrapper">
+      <h1 class="title">Login</h1>
+      <div class="errors"><%- include('./partials/messages') %></div>
+      <form action="/user/login" method="post" class="form">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          value="<%= typeof email != 'undefined' ? email : '' %>"
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+          value="<%= typeof password != 'undefined' ? password : '' %>"
+        />
+        <button type="submit" class="submit">Login</button>
+      </form>
+      <p class="askregister">
+        Dont't have an account? <a href="/user/register">Register</a>
+      </p>
+    </div>
+  </div>
+</div>
